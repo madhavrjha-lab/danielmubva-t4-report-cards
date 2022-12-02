@@ -9,6 +9,7 @@
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.3/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="./style.css">
 </head>
 
@@ -28,7 +29,7 @@
           </div>
           <div class="field-group">
             <label for="student">Student:</label>
-            <select name="student" id="student">
+            <select name="student" id="student" class="select2">
               <option value="" disabled selected>Select Student</option>
             </select>
           </div>
@@ -53,7 +54,16 @@
       </div>
     </div>
   </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
   <script src="./main.js"></script>
+
+  <script>
+    $(document).ready(function () {
+      $('.select2').select2();
+    })
+  </script>
 </body>
 
 </html>

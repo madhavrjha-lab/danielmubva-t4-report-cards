@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get Your Report Cards - Danile Mubva Primary School</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+  <main id="getReportCard">
+    <div class="container">
+      <div class="title">
+        <h2>Term IV Report Cards</h2>
+      </div>
+      <div class="wrapper">
+        <div class="form">
+          <div class="field-group">
+            <label for="class">Class:</label>
+            <select name="class" id="class">
+            </select>
+          </div>
+          <div class="field-group">
+            <label for="firstName">Learner First Name:</label>
+            <input type="text" name="firstName" id="firstName">
+          </div>
+          <div class="field-group">
+            <label for="lastName">Learner Last Name:</label>
+            <input type="text" name="lastName" id="lastName">
+          </div>
+          <div class="field-group">
+            <label for="dob">Date Of Birth:</label>
+            <input type="date" name="dob" id="dob">
+          </div>
+        </div>
+        <div class="report-card hide">
+          <div class="profile-image">
+            <i class="fa-solid fa-user"></i>
+          </div>
+          <div class="profile-details">
+            <h3 class="name"></h3>
+            <p><span class="class"></span> <span class="dob"></span></p>
+            <a href="#" class="url" target="_blank">View Report Card</a>
+          </div>
+        </div>
+        <div class="error-box hide">
+          <p class="message"></p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+  <script src="./main.js"></script>
+
+  <script>
+    $(document).ready(function () {
+      $('.select2').select2();
+    })
+  </script>
+</body>
+
+</html>
